@@ -1,1 +1,9 @@
-
+:root {
+            --primary: #4a6fa5;
+            --secondary: #ffb347;
+            --safe: #4CAF50;
+            --warning: #ff9800;
+            --danger: #f44336;
+            --light: #f9f9f9;
+            --dark: #333;
+        }
