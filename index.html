@@ -23,432 +23,420 @@
         <!-- ... вставьте ВСЕ HTML из предыдущего кода без изменений ... -->
     </div>
 
-    <script>
-        // Данные чек-листа с иконками
-        const checklistData = {
-            "critical": {
-                title: "⚠️ Критически важная безопасность (приоритет №1)",
-                icon: "fas fa-exclamation-triangle",
-                color: "#EF476F",
-                items: [
-                    "На всех окнах установлены детские замки или ограничители открывания",
-                    "Стулья, кресла, диваны и другие предметы отодвинуты от окон",
-                    "Все знают, что москитные сетки не выдерживают вес ребенка",
-                    "Балконная дверь всегда закрыта на верхний замок, ключ убран",
-                    "Вся высокая и нестабильная мебель надежно прикреплена к стене",
-                    "Телевизор закреплен на стене или стоит на низкой устойчивой тумбе",
-                    "Лекарства и витамины хранятся в закрывающемся контейнере на высокой полке",
-                    "Вся бытовая химия хранится вне доступа ребенка",
-                    "Нет опасных веществ в бутылках из-под напитков",
-                    "В кухне и на каждом этаже есть исправные огнетушитель и пожарная сигнализация",
-                    "Спички и зажигалки хранятся в недоступном для ребенка месте",
-                    "Розетки, не используемые постоянно, закрыты заглушками",
-                    "Удлинители и провода не лежат на полу и не висят в зоне доступа"
-                ]
-            },
-            "rooms": {
-                title: "🚸 Безопасность в каждой комнате",
-                icon: "fas fa-home",
-                color: "#FFD166",
-                items: [
-                    "Ручки плиты защищены специальными колпачками-блокираторами",
-                    "Во время готовки ручки кастрюль повернуты к стене",
-                    "Ножи, вилки, ножницы хранятся в закрывающихся ящиках",
-                    "Скатерти со столов убраны",
-                    "Пакеты хранятся вне доступа",
-                    "На дне ванны и на полу лежат противоскользящие коврики",
-                    "Есть термометр для воды (не выше 37-38°C)",
-                    "Двери в ванную/туалет закрываются на детские замки",
-                    "Фен, бритва, плойка хранятся в недоступном месте",
-                    "Косметические средства убраны в шкафчик",
-                    "На острых углах установлены мягкие защитные накладки",
-                    "Тяжелые, хрупкие предметы убраны с низких полок",
-                    "Шнуры от штор и жалюзи укорочены или закреплены высоко",
-                    "Мелкие предметы убраны с пола и открытых поверхностей",
-                    "Комнатные растения проверены на ядовитость",
-                    "На лестнице установлены детские ворота-барьеры",
-                    "На межкомнатных дверях есть фиксаторы или мягкие накладки",
-                    "Полы чистые, нет разбросанных игрушек"
-                ]
-            },
-            "habits": {
-                title: "💡 Образование и привычки",
-                icon: "fas fa-graduation-cap",
-                color: "#06D6A0",
-                items: [
-                    "Я знаю номер телефона службы спасения 112 и токсикологического центра",
-                    "В моей телефонной книге есть контакты соседей или родственников для экстренной помощи",
-                    "Я не оставляю ребенка одного в ванной, на пеленальном столике или на высоких поверхностях НИ НА СЕКУНДУ",
-                    "Я всегда проверяю температуру еды и питья, прежде чем дать ребенку",
-                    "Мы начали изучать и называть опасные предметы («горячо», «остро», «нельзя»)",
-                    "Я учу ребенка правильно вести себя на кухне",
-                    "Мы отрабатываем правила, что делать, если в доме пахнет газом",
-                    "Мы учим ребенка не открывать дверь незнакомцам"
-                ]
-            }
-        };
+<script>
+    // Данные чек-листа с иконками
+    const checklistData = {
+        "critical": {
+            title: "⚠️ Критически важная безопасность (приоритет №1)",
+            icon: "fas fa-exclamation-triangle",
+            color: "#EF476F",
+            items: [
+                "На всех окнах установлены детские замки или ограничители открывания",
+                "Стулья, кресла, диваны и другие предметы отодвинуты от окон",
+                "Все знают, что москитные сетки не выдерживают вес ребенка",
+                "Балконная дверь всегда закрыта на верхний замок, ключ убран",
+                "Вся высокая и нестабильная мебель надежно прикреплена к стене",
+                "Телевизор закреплен на стене или стоит на низкой устойчивой тумбе",
+                "Лекарства и витамины хранятся в закрывающемся контейнере на высокой полке",
+                "Вся бытовая химия хранится вне доступа ребенка",
+                "Нет опасных веществ в бутылках из-под напитков",
+                "В кухне и на каждом этаже есть исправные огнетушитель и пожарная сигнализация",
+                "Спички и зажигалки хранятся в недоступном для ребенка месте",
+                "Розетки, не используемые постоянно, закрыты заглушками",
+                "Удлинители и провода не лежат на полу и не висят в зоне доступа"
+            ]
+        },
+        "rooms": {
+            title: "🚸 Безопасность в каждой комнате",
+            icon: "fas fa-home",
+            color: "#FFD166",
+            items: [
+                "Ручки плиты защищены специальными колпачками-блокираторами",
+                "Во время готовки ручки кастрюль повернуты к стене",
+                "Ножи, вилки, ножницы хранятся в закрывающихся ящиках",
+                "Скатерти со столов убраны",
+                "Пакеты хранятся вне доступа",
+                "На дне ванны и на полу лежат противоскользящие коврики",
+                "Есть термометр для воды (не выше 37-38°C)",
+                "Двери в ванную/туалет закрываются на детские замки",
+                "Фен, бритва, плойка хранятся в недоступном месте",
+                "Косметические средства убраны в шкафчик",
+                "На острых углах установлены мягкие защитные накладки",
+                "Тяжелые, хрупкие предметы убраны с низких полок",
+                "Шнуры от штор и жалюзи укорочены или закреплены высоко",
+                "Мелкие предметы убраны с пола и открытых поверхностей",
+                "Комнатные растения проверены на ядовитость",
+                "На лестнице установлены детские ворота-барьеры",
+                "На межкомнатных дверях есть фиксаторы или мягкие накладки",
+                "Полы чистые, нет разбросанных игрушек"
+            ]
+        },
+        "habits": {
+            title: "💡 Образование и привычки",
+            icon: "fas fa-graduation-cap",
+            color: "#06D6A0",
+            items: [
+                "Я знаю номер телефона службы спасения 112 и токсикологического центра",
+                "В моей телефонной книге есть контакты соседей или родственников для экстренной помощи",
+                "Я не оставляю ребенка одного в ванной, на пеленальном столике или на высоких поверхностях НИ НА СЕКУНДУ",
+                "Я всегда проверяю температуру еды и питья, прежде чем дать ребенку",
+                "Мы начали изучать и называть опасные предметы («горячо», «остро», «нельзя»)",
+                "Я учу ребенка правильно вести себя на кухне",
+                "Мы отрабатываем правила, что делать, если в доме пахнет газом",
+                "Мы учим ребенка не открывать дверь незнакомцам"
+            ]
+        }
+    };
 
-        // Глобальные переменные для управления состоянием
-        let isProcessing = false;
-        let totalItems = 0;
-        let checkedItems = 0;
+    // Инициализация при загрузке страницы
+    document.addEventListener('DOMContentLoaded', function() {
+        // Установка текущей даты
+        const now = new Date();
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+        document.getElementById('current-date').textContent = now.toLocaleDateString('ru-RU', options);
+        
+        // Инициализация
+        initAgeSelection();
+        loadChecklist();
+        loadSavedData();
+        setupEventListeners();
+        
+        // Первое сообщение
+        setTimeout(() => {
+            showMessage('Добро пожаловать! Начинайте отмечать выполненные пункты.');
+        }, 1000);
+    });
 
-        // Инициализация при загрузке страницы
-        document.addEventListener('DOMContentLoaded', function() {
-            // Установка текущей даты
-            const now = new Date();
-            const options = { day: 'numeric', month: 'long', year: 'numeric' };
-            document.getElementById('current-date').textContent = now.toLocaleDateString('ru-RU', options);
-            
-            // Инициализация
-            initAgeSelection();
-            loadChecklist();
-            loadSavedData();
-            setupEventListeners();
-            
-            // Первое сообщение
-            setTimeout(() => {
-                showMessage('Добро пожаловать! Начинайте отмечать выполненные пункты.');
-            }, 1000);
+    function initAgeSelection() {
+        const ageOptions = document.querySelectorAll('.age-option');
+        ageOptions.forEach(option => {
+            option.addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.classList.toggle('active');
+                saveAgeSelection();
+                createConfetti(this);
+            });
         });
-
-        function initAgeSelection() {
-            const ageOptions = document.querySelectorAll('.age-option');
-            ageOptions.forEach(option => {
-                option.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    this.classList.toggle('active');
-                    saveAgeSelection();
-                    createConfetti(this);
-                });
-            });
-            
-            // Загружаем сохраненный выбор возраста
-            const savedAges = JSON.parse(localStorage.getItem('childAges')) || [];
-            ageOptions.forEach(option => {
-                if (savedAges.includes(option.dataset.age)) {
-                    option.classList.add('active');
-                }
-            });
-        }
-
-        function saveAgeSelection() {
-            const activeAges = Array.from(document.querySelectorAll('.age-option.active'))
-                .map(option => option.dataset.age);
-            localStorage.setItem('childAges', JSON.stringify(activeAges));
-        }
-
-        function loadChecklist() {
-            const checklistContainer = document.getElementById('checklist');
-            checklistContainer.innerHTML = '';
-            
-            for (const [sectionKey, sectionData] of Object.entries(checklistData)) {
-                const sectionDiv = document.createElement('div');
-                sectionDiv.className = `section section-${sectionKey}`;
-                sectionDiv.style.borderLeftColor = sectionData.color;
-                
-                const titleDiv = document.createElement('div');
-                titleDiv.className = 'section-title';
-                titleDiv.innerHTML = `
-                    <i class="${sectionData.icon}" style="color: ${sectionData.color}"></i>
-                    <span>${sectionData.title}</span>
-                `;
-                
-                sectionDiv.appendChild(titleDiv);
-                
-                const itemsContainer = document.createElement('div');
-                itemsContainer.className = 'items-container';
-                
-                sectionData.items.forEach((itemText, index) => {
-                    const itemId = `${sectionKey}-${index}`;
-                    
-                    const itemDiv = document.createElement('div');
-                    itemDiv.className = 'item';
-                    itemDiv.dataset.itemId = itemId;
-                    
-                    const checkboxDiv = document.createElement('div');
-                    checkboxDiv.className = 'checkbox';
-                    checkboxDiv.dataset.itemId = itemId;
-                    
-                    const contentDiv = document.createElement('div');
-                    contentDiv.className = 'item-content';
-                    contentDiv.textContent = itemText;
-                    
-                    itemDiv.appendChild(checkboxDiv);
-                    itemDiv.appendChild(contentDiv);
-                    itemsContainer.appendChild(itemDiv);
-                });
-                
-                sectionDiv.appendChild(itemsContainer);
-                checklistContainer.appendChild(sectionDiv);
+        
+        // Загружаем сохраненный выбор возраста
+        const savedAges = JSON.parse(localStorage.getItem('childAges')) || [];
+        ageOptions.forEach(option => {
+            if (savedAges.includes(option.dataset.age)) {
+                option.classList.add('active');
             }
-            
-            // Подсчитываем общее количество пунктов
-            totalItems = document.querySelectorAll('.checkbox').length;
-        }
+        });
+    }
 
-        function setupEventListeners() {
-            // Обработчики для чекбоксов через делегирование событий
-            document.addEventListener('click', function(e) {
-                if (isProcessing) return;
+    function saveAgeSelection() {
+        const activeAges = Array.from(document.querySelectorAll('.age-option.active'))
+            .map(option => option.dataset.age);
+        localStorage.setItem('childAges', JSON.stringify(activeAges));
+    }
+
+    function loadChecklist() {
+        const checklistContainer = document.getElementById('checklist');
+        checklistContainer.innerHTML = '';
+        
+        for (const [sectionKey, sectionData] of Object.entries(checklistData)) {
+            const sectionDiv = document.createElement('div');
+            sectionDiv.className = `section section-${sectionKey}`;
+            sectionDiv.style.borderLeftColor = sectionData.color;
+            
+            const titleDiv = document.createElement('div');
+            titleDiv.className = 'section-title';
+            titleDiv.innerHTML = `
+                <i class="${sectionData.icon}" style="color: ${sectionData.color}"></i>
+                <span>${sectionData.title}</span>
+            `;
+            
+            sectionDiv.appendChild(titleDiv);
+            
+            const itemsContainer = document.createElement('div');
+            itemsContainer.className = 'items-container';
+            
+            sectionData.items.forEach((itemText, index) => {
+                const itemId = `${sectionKey}-${index}`;
                 
-                // Если кликнули на чекбокс
-                if (e.target.classList.contains('checkbox')) {
-                    e.stopPropagation();
-                    handleCheckboxClick(e.target);
-                }
-                // Если кликнули на весь пункт (но не на чекбокс)
-                else if (e.target.closest('.item')) {
-                    const item = e.target.closest('.item');
-                    const checkbox = item.querySelector('.checkbox');
-                    if (checkbox && !e.target.classList.contains('checkbox')) {
-                        handleCheckboxClick(checkbox);
-                    }
-                }
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'item';
+                itemDiv.dataset.itemId = itemId;
+                
+                const checkboxDiv = document.createElement('div');
+                checkboxDiv.className = 'checkbox';
+                checkboxDiv.dataset.itemId = itemId;
+                
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'item-content';
+                contentDiv.textContent = itemText;
+                
+                itemDiv.appendChild(checkboxDiv);
+                itemDiv.appendChild(contentDiv);
+                itemsContainer.appendChild(itemDiv);
             });
             
-            // Кнопка сохранения
-            document.getElementById('saveBtn').addEventListener('click', saveAllData);
-            
-            // Кнопка сброса
-            document.getElementById('resetBtn').addEventListener('click', function() {
-                if (confirm('Вы уверены, что хотите сбросить все галочки и начать заново?')) {
-                    resetChecklist();
-                    showMessage('Чек-лист сброшен! Начинаем заново.');
-                }
-            });
-            
-            // Кнопка печати
-            document.getElementById('printBtn').addEventListener('click', function() {
-                window.print();
-            });
-            
-            // Автосохранение заметок
-            document.getElementById('notes').addEventListener('input', function() {
-                localStorage.setItem('safetyNotes', this.value);
-            });
+            sectionDiv.appendChild(itemsContainer);
+            checklistContainer.appendChild(sectionDiv);
         }
+    }
 
-        function handleCheckboxClick(checkbox) {
-            if (isProcessing || !checkbox) return;
-            
-            isProcessing = true;
-            
-            // Определяем текущее состояние ДО изменения
-            const wasChecked = checkbox.classList.contains('checked');
-            
-            // Инвертируем состояние
-            checkbox.classList.toggle('checked');
-            
-            // Определяем новое состояние ПОСЛЕ изменения
-            const isNowChecked = checkbox.classList.contains('checked');
-            
-            // Сохраняем состояние
-            const itemId = checkbox.dataset.itemId;
-            let checkedItemsData = JSON.parse(localStorage.getItem('checkedItems')) || {};
-            checkedItemsData[itemId] = isNowChecked;
-            localStorage.setItem('checkedItems', JSON.stringify(checkedItemsData));
-            
-            // Обновляем счетчик
-            checkedItems += isNowChecked ? 1 : -1;
-            
-            // Анимация и обновление
-            if (isNowChecked) {
-                createConfetti(checkbox);
+    function setupEventListeners() {
+        // Обработчики для чекбоксов через делегирование событий
+        document.addEventListener('click', function(e) {
+            // Если кликнули на чекбокс
+            if (e.target.classList.contains('checkbox')) {
+                e.stopPropagation();
+                handleCheckboxClick(e.target);
             }
-            
-            // Обновляем результаты
-            updateResults();
-            
-            // Показываем сообщения при достижении вех
-            const percentage = Math.round((checkedItems / totalItems) * 100);
-            
-            if (percentage === 50 && isNowChecked) {
-                setTimeout(() => showMessage('Отлично! Половина пунктов уже выполнена!'), 300);
-            } else if (percentage === 100 && isNowChecked) {
-                setTimeout(() => {
-                    showMessage('Потрясающе! Все пункты выполнены! Ваш дом безопасен!');
-                    createConfettiRain();
-                }, 300);
+            // Если кликнули на весь пункт (но не на чекбокс)
+            else if (e.target.closest('.item')) {
+                const item = e.target.closest('.item');
+                const checkbox = item.querySelector('.checkbox');
+                if (checkbox && !e.target.classList.contains('checkbox')) {
+                    handleCheckboxClick(checkbox);
+                }
             }
-            
-            // Снимаем блокировку
+        });
+        
+        // Кнопка сохранения
+        document.getElementById('saveBtn').addEventListener('click', saveAllData);
+        
+        // Кнопка сброса
+        document.getElementById('resetBtn').addEventListener('click', function() {
+            if (confirm('Вы уверены, что хотите сбросить все галочки и начать заново?')) {
+                resetChecklist();
+                showMessage('Чек-лист сброшен! Начинаем заново.');
+            }
+        });
+        
+        // Кнопка печати
+        document.getElementById('printBtn').addEventListener('click', function() {
+            window.print();
+        });
+        
+        // Автосохранение заметок
+        document.getElementById('notes').addEventListener('input', function() {
+            localStorage.setItem('safetyNotes', this.value);
+        });
+    }
+
+    function handleCheckboxClick(checkbox) {
+        if (!checkbox) return;
+        
+        // Сохраняем текущее состояние ДО изменения
+        const wasChecked = checkbox.classList.contains('checked');
+        
+        // Инвертируем состояние
+        checkbox.classList.toggle('checked');
+        
+        // Определяем новое состояние
+        const isNowChecked = checkbox.classList.contains('checked');
+        
+        // Сохраняем состояние
+        const itemId = checkbox.dataset.itemId;
+        let checkedItemsData = JSON.parse(localStorage.getItem('checkedItems')) || {};
+        checkedItemsData[itemId] = isNowChecked;
+        localStorage.setItem('checkedItems', JSON.stringify(checkedItemsData));
+        
+        // Анимация только при установке галочки
+        if (isNowChecked && !wasChecked) {
+            createConfetti(checkbox);
+        }
+        
+        // Обновляем результаты
+        updateResults();
+        
+        // Показываем сообщения при достижении вех
+        const total = document.querySelectorAll('.checkbox').length;
+        const checked = document.querySelectorAll('.checkbox.checked').length;
+        const percentage = Math.round((checked / total) * 100);
+        
+        if (percentage === 50 && isNowChecked && !wasChecked) {
+            setTimeout(() => showMessage('Отлично! Половина пунктов уже выполнена!'), 300);
+        } else if (percentage === 100 && isNowChecked && !wasChecked) {
             setTimeout(() => {
-                isProcessing = false;
-            }, 100);
+                showMessage('Потрясающе! Все пункты выполнены! Ваш дом безопасен!');
+                createConfettiRain();
+            }, 300);
         }
+    }
 
-        function updateResults() {
-            const percentage = totalItems > 0 ? Math.round((checkedItems / totalItems) * 100) : 0;
-            
-            // Обновляем цифры
-            document.getElementById('total-items').textContent = totalItems;
-            document.getElementById('checked-items').textContent = checkedItems;
-            document.getElementById('safety-level').textContent = percentage;
-            document.getElementById('progress-value').textContent = percentage + '%';
-            
-            // Обновляем круговой прогресс
-            const circumference = 2 * Math.PI * 90;
-            const offset = circumference - (percentage / 100) * circumference;
-            const progressRing = document.getElementById('progress-ring');
-            if (progressRing) {
-                progressRing.style.strokeDashoffset = offset;
+    function updateResults() {
+        const checkboxes = document.querySelectorAll('.checkbox');
+        const total = checkboxes.length;
+        let checked = 0;
+        
+        // Пересчитываем все галочки
+        checkboxes.forEach(checkbox => {
+            if (checkbox.classList.contains('checked')) {
+                checked++;
             }
-            
-            // Обновляем сообщение
-            const messageElement = document.getElementById('safety-message');
-            if (percentage === 0) {
-                messageElement.textContent = 'Начните отмечать выполненные пункты выше ↑';
-            } else if (percentage < 50) {
-                messageElement.textContent = 'Хорошее начало! Продолжайте работу над безопасностью.';
-            } else if (percentage < 80) {
-                messageElement.textContent = 'Отлично! Большая часть пунктов уже выполнена.';
-            } else if (percentage < 100) {
-                messageElement.textContent = 'Почти идеально! Осталось совсем немного.';
-            } else {
-                messageElement.textContent = 'Идеально! Ваш дом полностью безопасен для ребенка!';
-            }
+        });
+        
+        const percentage = total > 0 ? Math.round((checked / total) * 100) : 0;
+        
+        // Обновляем цифры
+        document.getElementById('total-items').textContent = total;
+        document.getElementById('checked-items').textContent = checked;
+        document.getElementById('safety-level').textContent = percentage;
+        document.getElementById('progress-value').textContent = percentage + '%';
+        
+        // Обновляем круговой прогресс
+        const circumference = 2 * Math.PI * 90;
+        const offset = circumference - (percentage / 100) * circumference;
+        const progressRing = document.getElementById('progress-ring');
+        if (progressRing) {
+            progressRing.style.strokeDashoffset = offset;
         }
+        
+        // Обновляем сообщение
+        const messageElement = document.getElementById('safety-message');
+        if (percentage === 0) {
+            messageElement.textContent = 'Начните отмечать выполненные пункты выше ↑';
+        } else if (percentage < 50) {
+            messageElement.textContent = 'Хорошее начало! Продолжайте работу над безопасностью.';
+        } else if (percentage < 80) {
+            messageElement.textContent = 'Отлично! Большая часть пунктов уже выполнена.';
+        } else if (percentage < 100) {
+            messageElement.textContent = 'Почти идеально! Осталось совсем немного.';
+        } else {
+            messageElement.textContent = 'Идеально! Ваш дом полностью безопасен для ребенка!';
+        }
+    }
 
-        function loadSavedData() {
-            // Загружаем галочки
-            const checkedItemsData = JSON.parse(localStorage.getItem('checkedItems')) || {};
-            checkedItems = 0;
-            
-            for (const [itemId, isChecked] of Object.entries(checkedItemsData)) {
-                const checkbox = document.querySelector(`.checkbox[data-item-id="${itemId}"]`);
-                if (checkbox) {
-                    if (isChecked) {
-                        checkbox.classList.add('checked');
-                        checkedItems++;
-                    } else {
-                        checkbox.classList.remove('checked');
-                    }
+    function loadSavedData() {
+        // Загружаем галочки
+        const checkedItemsData = JSON.parse(localStorage.getItem('checkedItems')) || {};
+        
+        for (const [itemId, isChecked] of Object.entries(checkedItemsData)) {
+            const checkbox = document.querySelector(`.checkbox[data-item-id="${itemId}"]`);
+            if (checkbox) {
+                if (isChecked) {
+                    checkbox.classList.add('checked');
+                } else {
+                    checkbox.classList.remove('checked');
                 }
             }
-            
-            // Загружаем заметки
-            const savedNotes = localStorage.getItem('safetyNotes') || '';
-            document.getElementById('notes').value = savedNotes;
-            
-            // Обновляем результаты после загрузки данных
-            updateResults();
         }
+        
+        // Загружаем заметки
+        const savedNotes = localStorage.getItem('safetyNotes') || '';
+        document.getElementById('notes').value = savedNotes;
+        
+        // Обновляем результаты после загрузки данных
+        updateResults();
+    }
 
-        function saveAllData() {
-            saveAgeSelection();
-            localStorage.setItem('lastSave', new Date().toISOString());
-            showMessage('Все данные успешно сохранены!');
+    function saveAllData() {
+        saveAgeSelection();
+        localStorage.setItem('lastSave', new Date().toISOString());
+        showMessage('Все данные успешно сохранены!');
+    }
+
+    function resetChecklist() {
+        // Сброс галочек
+        document.querySelectorAll('.checkbox').forEach(checkbox => {
+            checkbox.classList.remove('checked');
+        });
+        
+        // Сброс выбора возраста
+        document.querySelectorAll('.age-option').forEach(option => {
+            option.classList.remove('active');
+        });
+        
+        // Очистка localStorage
+        localStorage.removeItem('checkedItems');
+        localStorage.removeItem('childAges');
+        localStorage.removeItem('safetyNotes');
+        document.getElementById('notes').value = '';
+        
+        // Обновление результатов
+        updateResults();
+    }
+
+    function showMessage(text) {
+        const messageElement = document.getElementById('successMessage');
+        messageElement.querySelector('span').textContent = text;
+        messageElement.style.display = 'flex';
+        
+        setTimeout(() => {
+            messageElement.style.display = 'none';
+        }, 3000);
+    }
+
+    function createConfetti(element) {
+        const rect = element.getBoundingClientRect();
+        const colors = ['#4ECDC4', '#FF6B6B', '#FFD166', '#06D6A0', '#764ba2'];
+        
+        for (let i = 0; i < 5; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = (rect.left + rect.width / 2) + 'px';
+            confetti.style.top = (rect.top + rect.height / 2) + 'px';
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+            
+            document.body.appendChild(confetti);
+            
+            const angle = Math.random() * Math.PI * 2;
+            const velocity = 3 + Math.random() * 3;
+            const vx = Math.cos(angle) * velocity;
+            let vy = Math.sin(angle) * velocity; // ИЗМЕНИЛИ const на let
+            
+            let opacity = 1;
+            let x = 0;
+            let y = 0;
+            
+            const animate = () => {
+                x += vx;
+                y += vy;
+                vy += 0.1; // Теперь это работает, потому что vy объявлена как let
+                opacity -= 0.02;
+                
+                confetti.style.transform = `translate(${x}px, ${y}px)`;
+                confetti.style.opacity = opacity;
+                
+                if (opacity > 0) {
+                    requestAnimationFrame(animate);
+                } else {
+                    confetti.remove();
+                }
+            };
+            
+            animate();
         }
+    }
 
-        function resetChecklist() {
-            // Сброс галочек
-            document.querySelectorAll('.checkbox').forEach(checkbox => {
-                checkbox.classList.remove('checked');
-            });
-            
-            // Сброс выбора возраста
-            document.querySelectorAll('.age-option').forEach(option => {
-                option.classList.remove('active');
-            });
-            
-            // Очистка localStorage
-            localStorage.removeItem('checkedItems');
-            localStorage.removeItem('childAges');
-            localStorage.removeItem('safetyNotes');
-            document.getElementById('notes').value = '';
-            
-            // Сброс счетчиков
-            checkedItems = 0;
-            
-            // Обновление результатов
-            updateResults();
-        }
-
-        function showMessage(text) {
-            const messageElement = document.getElementById('successMessage');
-            messageElement.querySelector('span').textContent = text;
-            messageElement.style.display = 'flex';
-            
+    function createConfettiRain() {
+        const colors = ['#4ECDC4', '#FF6B6B', '#FFD166', '#06D6A0', '#764ba2'];
+        
+        for (let i = 0; i < 50; i++) {
             setTimeout(() => {
-                messageElement.style.display = 'none';
-            }, 3000);
-        }
-
-        function createConfetti(element) {
-            const rect = element.getBoundingClientRect();
-            const colors = ['#4ECDC4', '#FF6B6B', '#FFD166', '#06D6A0', '#764ba2'];
-            
-            for (let i = 0; i < 5; i++) {
                 const confetti = document.createElement('div');
                 confetti.className = 'confetti';
-                confetti.style.left = (rect.left + rect.width / 2) + 'px';
-                confetti.style.top = (rect.top + rect.height / 2) + 'px';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = '-20px';
                 confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 15 + 10 + 'px';
+                confetti.style.height = confetti.style.width;
                 confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
                 
                 document.body.appendChild(confetti);
                 
-                const angle = Math.random() * Math.PI * 2;
-                const velocity = 3 + Math.random() * 3;
-                const vx = Math.cos(angle) * velocity;
-                const vy = Math.sin(angle) * velocity;
+                const duration = 2 + Math.random() * 2;
+                const endX = (Math.random() - 0.5) * 200;
                 
-                let opacity = 1;
-                let x = 0;
-                let y = 0;
+                confetti.animate([
+                    { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
+                    { transform: `translate(${endX}px, 100vh) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                ], {
+                    duration: duration * 1000,
+                    easing: 'cubic-bezier(0.1, 0.8, 0.9, 0.1)'
+                });
                 
-                const animate = () => {
-                    x += vx;
-                    y += vy;
-                    vy += 0.1; // гравитация
-                    opacity -= 0.02;
-                    
-                    confetti.style.transform = `translate(${x}px, ${y}px)`;
-                    confetti.style.opacity = opacity;
-                    
-                    if (opacity > 0) {
-                        requestAnimationFrame(animate);
-                    } else {
-                        confetti.remove();
-                    }
-                };
-                
-                animate();
-            }
+                setTimeout(() => confetti.remove(), duration * 1000);
+            }, i * 100);
         }
-
-        function createConfettiRain() {
-            const colors = ['#4ECDC4', '#FF6B6B', '#FFD166', '#06D6A0', '#764ba2'];
-            
-            for (let i = 0; i < 50; i++) {
-                setTimeout(() => {
-                    const confetti = document.createElement('div');
-                    confetti.className = 'confetti';
-                    confetti.style.left = Math.random() * 100 + 'vw';
-                    confetti.style.top = '-20px';
-                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                    confetti.style.width = Math.random() * 15 + 10 + 'px';
-                    confetti.style.height = confetti.style.width;
-                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
-                    
-                    document.body.appendChild(confetti);
-                    
-                    const duration = 2 + Math.random() * 2;
-                    const endX = (Math.random() - 0.5) * 200;
-                    
-                    confetti.animate([
-                        { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
-                        { transform: `translate(${endX}px, 100vh) rotate(${Math.random() * 360}deg)`, opacity: 0 }
-                    ], {
-                        duration: duration * 1000,
-                        easing: 'cubic-bezier(0.1, 0.8, 0.9, 0.1)'
-                    });
-                    
-                    setTimeout(() => confetti.remove(), duration * 1000);
-                }, i * 100);
-            }
-        }
-    </script>
+    }
+</script>
 </body>
 </html>
