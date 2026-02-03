@@ -264,6 +264,7 @@
             gap: 15px;
             transition: all 0.3s;
             border: 2px solid transparent;
+            cursor: pointer;
         }
         
         .item:hover {
@@ -317,6 +318,7 @@
             flex-grow: 1;
             font-size: 1.05rem;
             line-height: 1.5;
+            user-select: none;
         }
         
         .progress-section {
@@ -372,7 +374,7 @@
             stroke-linecap: round;
             transform: rotate(-90deg);
             transform-origin: 50% 50%;
-            transition: stroke-dashoffset 1.5s ease;
+            transition: stroke-dashoffset 0.5s ease;
         }
         
         .progress-value {
@@ -624,7 +626,7 @@
                             </linearGradient>
                         </defs>
                         <circle class="progress-ring-bg" cx="100" cy="100" r="90"/>
-                        <circle class="progress-ring" cx="100" cy="100" r="90" stroke-dasharray="565.48" stroke-dashoffset="565.48"/>
+                        <circle id="progress-ring" class="progress-ring" cx="100" cy="100" r="90" stroke-dasharray="565.48" stroke-dashoffset="565.48"/>
                     </svg>
                     <div class="progress-value" id="progress-value">0%</div>
                 </div>
@@ -677,7 +679,7 @@
                 <i class="fas fa-heart" style="color: var(--danger);"></i>
                 Создано с заботой о безопасности ваших детей
             </p>
-            <p>© Детский сад | Чек-лист обновлен: <span id="current-date"></span></p>
+            <p>© Детский сад 18 г. Бузулук | Чек-лист обновлен: <span id="current-date"></span></p>
             <p style="margin-top: 10px; font-size: 0.9rem; color: #718096;">
                 Проводите проверку безопасности каждые 3-6 месяцев. Ребенок растет — риски меняются!
             </p>
@@ -760,7 +762,6 @@
             initAgeSelection();
             loadChecklist();
             loadSavedData();
-            updateResults();
             setupEventListeners();
             
             // Первое сообщение
@@ -875,6 +876,8 @@
         }
 
         function toggleCheckbox(checkbox) {
+            if (!checkbox) return;
+            
             checkbox.classList.toggle('checked');
             
             // Сохраняем состояние
@@ -890,7 +893,7 @@
                 createConfetti(checkbox);
             }
             
-            // Обновляем результаты
+            // Обновляем результаты сразу!
             updateResults();
             
             // Показываем сообщение при достижении 50% и 100%
@@ -928,7 +931,7 @@
             // Обновляем круговой прогресс
             const circumference = 2 * Math.PI * 90;
             const offset = circumference - (percentage / 100) * circumference;
-            document.querySelector('.progress-ring').style.strokeDashoffset = offset;
+            document.getElementById('progress-ring').style.strokeDashoffset = offset;
             
             // Обновляем сообщение
             const messageElement = document.getElementById('safety-message');
@@ -959,6 +962,9 @@
             // Загружаем заметки
             const savedNotes = localStorage.getItem('safetyNotes') || '';
             document.getElementById('notes').value = savedNotes;
+            
+            // Обновляем результаты после загрузки данных
+            updateResults();
         }
 
         function saveAllData() {
